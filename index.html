@@ -1,27 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>TO-Do Project</title>
-    <link rel="stylesheet" href="assets/css/todos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <script src="assets/js/lib/jquery-3.4.1.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Pratham Goyal Portfolio">
+    <title>Pratham Goyal</title>
+    <!-- css and libraries -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="imgs/favicon.png">
 </head>
-<body>
-    
-    <div id="container">
-        <h1>To-Do List<i class="fa fa-plus"></i></h1>
-        <input type="text"  placeholder="Add New Todo">
-        <ul>
-            <li><span><i class="fa fa-trash"></i></span>Do Skipping</li>
-            <li><span><i class="fa fa-trash"></i></span>Drink Water</li>
-            <li><span><i class="fa fa-trash"></i></span>Do some</li>
-        </ul>
 
-    </div>
-    <a href="circle.html"><button style="top:5%; left:5%" type="button">Go to Circles</button></a>
-    
-    <script src="assets/js/todos.js"></script>
-</body>
+<body>
+    <header class="header_area">
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
+                <!-- navbar logo -->
+                <a href="" class="f_size_24 f_500 navbar-brand">&lt; Pratham Goyal &gt;</a>
+                <!-- toggler -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar"><i
+                        class='lni lni-text-align-justify'></i></button>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <!-- navbar links -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#works">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero_section d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="intro_area">
+                        <h2 class="f_size_65 f_600 mb_20 text-white" data-aos="zoom-in">Hello, I'm Pratham</h2>
+                        <p class="f_size_18 text-white" data-aos="fade-up" data-aos-delay="400">I am a student who is
+                            interested in learning Web development &amp; android development</p>
+                        <a href="#about" class="m_btn btn_white" data-aos="fade-up" data-aos-delay="800">About Me</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="hero_img" data-aos="fade-left" data-aos-delay="400">
+                        <img src="imgs/pratham.jpg" class="img-fluid main_image">
+                    </div>
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </section>
+
+    <!-- about section -->
+    <section class="about_area" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="about_img">
+                        <img src="imgs/about.png" class="img-fluid" alt="about_image">
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-5 offset-lg-1 offset-md-1 pl-lg-0">
+                    <div class="about_content">
+                        <h2 class="t_color_dark f_size_30 f_600 mb_15">Hi There,</h2>
+                        <p>I am BE ECE student in UIET. I have made several projects in web development and android
+                            development and further exploring them at advance level.
+                            I have also worked in several startups as an intern. I never miss an opportunity to learn
+                            anything new.</p>
+                        <a href="cv.pdf" class="my_work">PORTFOLIO <i class='lni lni-arrow-right'></i></a>
+                    </div>
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </section>
+
+    <!-- Work Experience section -->
+    <section class="my_services" id="works">
+        <div class="container">
+            <h2 class="t_color_dark f_size_30 f_600 mb_40 text-center">Work Experience</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-1" data-aos="fade-up">
+                    <div class="s_box" style="border-bottom: 2px solid #fa6fd1;">
+                        <span class="s_icon color_1">
+                            <img src="imgs/peppershades.png" height="40" width="40">
+                        </span>
+                        <h3 class="t_color_dark f_size_17 f_600">PepperShades</h3>
+                        <p>Currently as an android developer in PepperShades. Making an app similar to freelancer. Most
+                            of the app work is handeled by me</p>
+                    </div>
+                </div><!-- column -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="s_box" style="border-bottom: 2px solid #555555;">
+                        <img src="imgs/dzone.png" height="100" width="100" style="object-fit: cover;">
+                        <!-- <span class="s_icon color_2">
+                        </span> -->
+                        <h3 class="t_color_dark f_size_17 f_600">DZone</h3>
+                        <p>Worked in Dzone as an android developer. Made an app that would be a guide to new students in
+                            our university. I was one of the five interns.</p>
+                    </div>
+                </div><!-- column -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="s_box" style="border-bottom: 2px solid #0068ca;">
+                        <img src="imgs/arduino.png" height="100" width="100">
+                        <!-- <span class="s_icon color_3">
+                        </span> -->
+                        <h3 class="t_color_dark f_size_17 f_600">Arduino Mentor</h3>
+                        <p>Mentored students of GCET Jammu and various schools. Taught them about the basics of Arduino
+                            and interfacing it with many sensors.</p>
+                    </div>
+                </div><!-- column -->
+
+            </div><!-- row -->
+        </div><!-- container -->
+    </section>
+
+
+    <!-- skills section -->
+    <section class="my_skills" id="skills">
+        <h2 class="t_color_dark f_size_30 f_600 mb_40 text-center">My Skills</h2>
+        <div class="container">
+            <div class="row cntr">
+                <div class="col-lg-6 col-md-6">
+                    <div class="skill_theme">
+                        <h6 class="f_500">C Language</h6>
+                        <!-- <span class="f_500">92%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar" data-aos="full" data-aos-duration="2000"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill_theme">
+                        <h6 class="f_500">Java</h6>
+                        <!-- <span class="f_500">90%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar" data-aos="full" data-aos-duration="2000"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill_theme mb_on_sm">
+                        <h6 class="f_500">Android Studio</h6>
+                        <!-- <span class="f_500">62%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar" data-aos="full" data-aos-duration="2000"></div>
+                        </div>
+                    </div>
+                </div> <!-- column -->
+
+                <div class="col-lg-6 col-md-6">
+                    <div class="skill_theme">
+                        <h6 class="f_500">HTML</h6>
+                        <!-- <span class="f_500">85%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar" data-aos="full" data-aos-duration="2000"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill_theme">
+                        <h6 class="f_500">Css</h6>
+                        <!-- <span class="f_500">50%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar" data-aos="full" data-aos-duration="2000"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill_theme">
+                        <h6 class="f_500">Javascript</h6>
+                        <!-- <span class="f_500">60%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar" data-aos="full" data-aos-duration="2000"></div>
+                        </div>
+                    </div>
+                </div><!-- column -->
+            </div>
+            <br>
+            <div class="row cntr">
+
+                <div class="col-lg-6 col-md-6">
+                    <div class="skill_theme">
+                        <h6 class="f_500">jQuery</h6>
+                        <!-- <span class="f_500">85%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar" data-aos="full" data-aos-duration="2000"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill_theme">
+                        <h6 class="f_500">Node.js</h6>
+                        <!-- <span class="f_500">50%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar" data-aos="full" data-aos-duration="2000"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill_theme">
+                        <h6 class="f_500">Express.js</h6>
+                        <!-- <span class="f_500">60%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar" data-aos="full" data-aos-duration="2000"></div>
+                        </div>
+                    </div>
+                </div><!-- column -->
+
+
+                <div class="col-lg-6 col-md-6">
+
+                    <div class="skill_theme">
+                        <h6 class="f_500">MongoDB</h6>
+                        <!-- <span class="f_500">50%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar" data-aos="full" data-aos-duration="2000"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill_theme">
+                        <h6 class="f_500">Arduino</h6>
+                        <!-- <span class="f_500">85%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar" data-aos="full" data-aos-duration="2000"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill_theme">
+                        <h6 class="f_500">PCB designing in Eagle</h6>
+                        <!-- <span class="f_500">60%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar" data-aos="full" data-aos-duration="2000"></div>
+                        </div>
+                    </div>
+                </div><!-- column -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------------------projects section--------------------- -->
+    <section class="portfolio_gallery" id="portfolio">
+        <div class="container">
+            <h2 class="t_color_dark f_size_30 f_600 mb_40 text-center">Recent Works</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio_img">
+                        <img src="imgs/project-1.png" class="img-fluid">
+                        <div class="hover">
+                            <a href="https://polar-falls-58627.herokuapp.com/" target="_blank"><i
+                                    class='lni lni-eye'></i></a>
+                            <a href="https://github.com/TheRealTechWiz/Yelpcamp" target="_blank"><i class='lni lni-github-original'></i></a>
+                        </div>
+                        <div class="img_info">
+                            <h5 class="t_color_dark f_500">YelpCamp <i class="lni lni-nodejs lni-lg"></i> <i
+                                    class="lni lni-npm lni-lg"></i> <i class="lni lni-database lni-lg"></i></h5>
+                            <span>Market place for Campgrounds (Add and View)</span>
+                        </div>
+                    </div>
+                </div><!-- column -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio_img">
+                        <img src="imgs/todo.png" class="img-fluid">
+                        <div class="hover">
+                            <a href="Projects/todo/index.html" target="_blank"><i class='lni lni-eye'></i></a>
+                            <a href="https://github.com/TheRealTechWiz/ToDoListWebApp" target="_blank"><i
+                                    class='lni lni-github-original'></i></a>
+                        </div>
+                        <div class="img_info">
+                            <h5 class="t_color_dark f_500">To-Do <i class="lni lni-javascript lni-lg"></i></h5>
+                            <span>A basic good looking To-DO list</span>
+                        </div>
+                    </div>
+                </div><!-- column -->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio_img">
+                        <img src="imgs/color.png" class="img-fluid">
+                        <div class="hover">
+                            <a href="Projects/color/index.html" target="_blank"><i class='lni lni-eye'></i></a>
+                            <a href="https://github.com/TheRealTechWiz/TheColorGame" target="_blank"><i
+                                    class='lni lni-github-original'></i></a>
+                        </div>
+                        <div class="img_info">
+                            <h5 class="t_color_dark f_500">RGB guessing <i class="lni lni-javascript lni-lg"></i> </h5>
+                            <span>Guess the color based on value of rgb given</span>
+                        </div>
+                    </div>
+                </div><!-- column -->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio_img">
+                        <img src="imgs/circles.png" class="img-fluid">
+                        <div class="hover">
+                            <a href="Projects/circles/index.html" target="_blank"><i class='lni lni-eye'></i></a>
+                            <a href="https://github.com/TheRealTechWiz/circle" target="_blank"><i
+                                    class='lni lni-github-original'></i></a>
+                        </div>
+                        <div class="img_info">
+                            <h5 class="t_color_dark f_500">Circles <i class="lni lni-javascript lni-lg"></i></h5>
+                            <span>Generates Circles and sound on key press</span>
+                        </div>
+                    </div>
+                </div><!-- column -->
+            </div><!-- row -->
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="portfolio_img">
+                        <img src="imgs/pepperapp.jpg" class="img-fluid">
+                        <div class="hover">
+                            <a href="https://github.com/TheRealTechWiz/PepperApp" target="_blank"><i class='lni lni-github-original'></i></a>
+                        </div>
+                        <div class="img_info">
+                            <h5 class="t_color_dark f_500">Travel app <i class="lni lni-android-original lni-lg"></i>
+                            </h5>
+                            <span>Home screen of a travel app</span>
+                        </div>
+                    </div>
+                </div><!-- column -->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="portfolio_img">
+                        <img src="imgs/design.jpg" class="img-fluid">
+                        <div class="hover">
+
+                            <a href="https://github.com/TheRealTechWiz/ArtbrdProjects" target="_blank"><i
+                                    class='lni lni-github-original'></i></a>
+                        </div>
+                        <div class="img_info">
+                            <h5 class="t_color_dark f_500">Freelancing app <i
+                                    class="lni lni-android-original lni-lg"></i></h5>
+                            <span>Made screens of an app similar to freelancer</span>
+                        </div>
+                    </div>
+                </div><!-- column -->
+
+               
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="portfolio_img">
+                        <img src="imgs/layout.jpg" class="img-fluid">
+                        <div class="hover">
+
+                            <a href="https://github.com/TheRealTechWiz/Layout" target="_blank"><i class='lni lni-github-original'></i></a>
+                        </div>
+                        <div class="img_info">
+                            <h5 class="t_color_dark f_500">Layout <i class="lni lni-android-original lni-lg"></i></h5>
+                            <span>Made home screen for PU app</span>
+                        </div>
+                    </div>
+                </div><!-- column -->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="portfolio_img">
+                        <img src="imgs/earthquake.jpg" class="img-fluid">
+                        <div class="hover">
+                            <a href="https://github.com/TheRealTechWiz/EarthQuakeApp" target="_blank"><i class='lni lni-github-original'></i></a>
+                        </div>
+                        <div class="img_info">
+                            <h5 class="t_color_dark f_500">EarthQuake data App <i
+                                    class="lni lni-android-original lni-lg"></i></h5>
+                            <span>Know about recent EarthQuakes (USGS API)</span>
+                        </div>
+                    </div>
+                </div><!-- column -->       
+            </div><!-- row -->
+
+            <div class="row">         
+                <div class="col-lg-3 col-md-6">
+                    <div class="portfolio_img">
+                        <img src="imgs/stripe.jpg" class="img-fluid">
+                        <div class="hover">
+
+                            <a href="https://github.com/TheRealTechWiz/stripeapp" target="_blank"><i class='lni lni-github-original'></i></a>
+                        </div>
+                        <div class="img_info">
+                            <h5 class="t_color_dark f_500">Stripe payment <i
+                                    class="lni lni-android-original lni-lg"></i></h5>
+                            <span>Tested making payment through stripe </span>
+                        </div>
+                    </div>
+                </div><!-- column -->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="portfolio_img">
+                        <img src="imgs/map.jpg" class="img-fluid">
+                        <div class="hover">
+
+                            <a href="https://github.com/TheRealTechWiz/Maps" target="_blank"><i class='lni lni-github-original'></i></a>
+                        </div>
+                        <div class="img_info">
+                            <h5 class="t_color_dark f_500">Maps <i class="lni lni-android-original lni-lg"></i></h5>
+                            <span>Add your own location to maps (Google API)</span>
+                        </div>
+                    </div>
+                </div><!-- column -->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="portfolio_img">
+                        <img src="imgs/maths.jpg" class="img-fluid">
+                        <div class="hover">
+                            <a href="https://github.com/TheRealTechWiz/MathsTrainer" target="_blank"><i
+                                    class='lni lni-github-original'></i></a>
+                        </div>
+                        <div class="img_info">
+                            <h5 class="t_color_dark f_500">Maths Trainer <i class="lni lni-android-original lni-lg"></i>
+                            </h5>
+                            <span>Sharpen your basic Maths skills</span>
+                        </div>
+                    </div>
+                </div><!-- column -->
+
+            </div><!-- row -->
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <h2 class="text-white f_size_30 f_500 footer_logo">Pratham Goyal</h2>
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/kunal.bagnial/"><i class='lni lni-linkedin-original'></i></a></li>
+                <li><a href="https://github.com/TheRealTechWiz"><i class='lni lni-github-original'></i></a></li>
+            </ul>
+            <p class="m-0"><small>&copy;2020, All Rights Reserved</small></p>
+        </div>
+    </footer>
+
+    <!-- javascript and libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 800,
+            once: true,
+        });
+
+    </script>
+
 </html>
