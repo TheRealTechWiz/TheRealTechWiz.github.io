@@ -230,7 +230,7 @@ body {
 
 .my_skills .skill_theme h6 {
     display: inline-block;
-    width: 47%;
+    width: 80%;
     font-size: 16px;
     color: #444;
     margin: 0;
@@ -284,7 +284,7 @@ body {
 
 /* section: portfolio_gallery */
 .portfolio_gallery {
-    padding: 80px 0;
+    padding: 30px 0;
     background: #fbfbfd;
 }
 
@@ -301,7 +301,7 @@ body {
 .portfolio_img .hover {
     background: rgba(255, 255, 255, 0.62);
     position: absolute;
-    botttom: 0;
+    bottom: 0;
     opacity: 0;
     visibility: hidden;
     left: 0;
@@ -438,9 +438,6 @@ body {
     color: #8a8e9b;
 }
 .main_image{
-    margin-right:0;
-    margin-left: auto;
-    display:block; 
     height: 27em;
     border-radius: 50%;
 }
