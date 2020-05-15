@@ -414,7 +414,7 @@ body {
 
 /*-- footer --*/
 .footer {
-    margin-top: -100px;
+    margin-top: 0px;
     background: #07112d;
     padding: 150px 0 50px;
     text-align: center;
@@ -443,4 +443,7 @@ body {
 }
 .cntr{
     background-color: #fbfbfb;
+}
+.android{
+    margin-top: 30px;
 }
