@@ -1,0 +1,45 @@
+
+img{    
+    height: auto;
+    position: absolute;
+}
+.inner{
+    z-index: 3;
+    width: 32vw;
+    margin: 8.8%  34%;
+}
+/* .mid{
+    z-index: 2;
+    width: 36vw;
+    margin: 7% 32%;
+} */
+.out{
+z-index: 1;
+width: 45vw;
+margin: 2.5% 27.5%;
+}
+
+/* .inner{
+    z-index: 3;
+    width: 32vw;
+    margin: 6%  32.5%;
+}
+
+.out{
+z-index: 1;
+width: 45vw;
+margin: 2.5% 27.5%;
+} */
+
+/* INITIAL
+.inner{
+    z-index: 3;
+    width: 30vw;
+    margin: 10%  35%;
+}
+
+.out{
+z-index: 1;
+width: 40vw;
+margin: 5.2% 30%;
+} */
