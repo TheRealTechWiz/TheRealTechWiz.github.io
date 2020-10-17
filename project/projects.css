@@ -1,0 +1,30 @@
+body{
+		background-color:#2b2b2b;
+}
+h1{
+    padding: 10px 20px;
+	font-family: Roboto;
+	text-align: center;
+	margin-top: 40px;
+    font-size: 42px;
+	color: #2980B9;
+    font-weight: normal;
+} 
+ul{
+	
+	font-family: Roboto;
+	list-style: none;
+	width: 360px;
+    margin: 80px auto;
+    background: #f7f7f7;
+    box-shadow: 6px 6px 2px 0px rgb(29 29 29);
+	border-radius: 10px;
+	}
+li{
+	padding: 15px;
+}
+
+li a{
+	color: #656565;
+	text-decoration: none;
+}
