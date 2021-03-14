@@ -1,4 +1,5 @@
-//This run regular checks at 6 secondsconst imageUpload = document.getElementById('imageUpload')
+//This run regular checks at 6 seconds
+const imageUpload = document.getElementById('imageUpload')
 const btnsave = document.querySelector('#savebtn');
 const vid = document.querySelector('video');
 const namefield = document.querySelector('#name');
