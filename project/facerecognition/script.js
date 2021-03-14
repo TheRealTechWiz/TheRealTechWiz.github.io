@@ -1,65 +1,63 @@
-//This run regular checks at 6 seconds
-const imageUpload = document.getElementById('imageUpload')
-const btn = document.querySelector('button');
+//This run regular checks at 6 secondsconst imageUpload = document.getElementById('imageUpload')
+const btnsave = document.querySelector('#savebtn');
 const vid = document.querySelector('video');
 const namefield = document.querySelector('#name');
 const imageView = document.querySelector('img');
 clickImage();
 
 
-   function startInterval(labeledFaceDescriptors){
-    btn.style.display = "none";
-    namefield.style.display = "none";
-    imageView.style.display = "none";
-    setInterval(async() => {
+function startInterval(labeledFaceDescriptors) {
+  btnsave.style.display = "none";
+  namefield.style.display = "none";
+  imageView.style.display = "none";
+  setInterval(async () => {
     const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6)
-
 
     const canvas = document.createElement('canvas'); // create a canvas
     const ctx = canvas.getContext('2d'); // get its context
     canvas.width = vid.videoWidth; // set its size to the one of the video
     canvas.height = vid.videoHeight;
     ctx.drawImage(vid, 0, 0); // the video
-    var image = canvas.toDataURL("image/jpeg");    
+    var image = canvas.toDataURL("image/jpeg");
     const img = await faceapi.fetchImage(image)
-    const detections =  await faceapi.detectAllFaces(img).withFaceLandmarks().withFaceDescriptors()
-    if(detections.length==0){console.log('No one there')}
+    const detections = await faceapi.detectAllFaces(img).withFaceLandmarks().withFaceDescriptors()
+    if (detections.length == 0) { console.log('No one there') }
 
     const displaySize = { width: canvas.width, height: canvas.height }
     const resizedDetections = faceapi.resizeResults(detections, displaySize)
     const results = resizedDetections.map(d => faceMatcher.findBestMatch(d.descriptor))
     results.forEach((result, i) => {
-      if(result.label=="unknown"){
+      if (result.label == "unknown") {
         console.log('Someone else')
       }
-      else{
+      else {
         console.log('good')
       }
     })
 
 
-    }, 5000);
-  }
+  }, 6000);
+}
 
-  async function loadLabeledImages() {
-    let nameval = namefield.value;
-    const labels = [nameval]
-    return Promise.all(
-      labels.map(async label => {
-        const descriptions = []
-          const img = await faceapi.fetchImage(localStorage.getItem("Image"))
-          try {
-            const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
-            descriptions.push(detections.descriptor)
-            startInterval(new faceapi.LabeledFaceDescriptors(label, descriptions));
-          }
-          catch (e) {
-            alert("Face not Clear Try Again!!")
-            return false;
-          }
-      })
-    )
-  }
+async function loadLabeledImages() {
+  let nameval = namefield.value;
+  const labels = [nameval]
+  return Promise.all(
+    labels.map(async label => {
+      const descriptions = []
+      const img = await faceapi.fetchImage(localStorage.getItem("Image"))
+      try {
+        const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
+        descriptions.push(detections.descriptor)
+        startInterval(new faceapi.LabeledFaceDescriptors(label, descriptions));
+      }
+      catch (e) {
+        alert("Face not Clear Try Again!!")
+        return false;
+      }
+    })
+  )
+}
 // }
 //-------------===========------------------
 function clickImage() {
@@ -71,13 +69,13 @@ function clickImage() {
       return vid.play(); // returns a Promise
     })
     .then(() => { // enable the button
-      btn.disabled = false;
-      btn.onclick = e => {
+      btnsave.disabled = false;
+      btnsave.onclick = e => {
         takeASnap()
         // .then(download);
       };
     })
-    .catch(e => console.log('please use the fiddle instead'));
+    .catch(e => console.log(e,'please use the fiddle instead'));
 
   function takeASnap() {
     const canvas = document.createElement('canvas'); // create a canvas
@@ -101,6 +99,6 @@ function clickImage() {
     faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
     faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
     faceapi.nets.ssdMobilenetv1.loadFromUri('/models')
-  ]).then(function(){console.log("LOADED")})
+  ]).then(function () { console.log("LOADED") })
 
 }
